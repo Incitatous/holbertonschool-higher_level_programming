@@ -16,8 +16,8 @@ neg = ((number * -1) % 10)
 if number < 0:
     print("Last digit of ", end="")
     if neg > 5:
-        print("{:d} is {:d} and is greater than 5".format(number, neg))
+        print("{:d} is {:d} and is greater than 5".format(number, (neg * -1)))
     elif neg == 0:
         print("{:d} is 0 and is 0".format(number))
     elif neg < 6 and not 0:
-        print("{:d} is {:d} and is less than 6 and not 0".format(number, neg))
+        print("{:d} is {:d} and is less than 6 and not 0".format(number, (neg * -1)))
