@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-i = 0
-for i in range(89):
-    print("{:0>2}, ".format(i), end="")
+for i in range(8):
+    for j in range(i + 1, 10, 1):
+        print("{:d}{:d} ,".format(i, j), end="")
 print(89)
