@@ -19,7 +19,79 @@ TypeError: b must be an integer
 99
 >>> add_integer(1, 98.089)
 99
+>>> add_integer(98.0987, 1)
+99
 >>> add_integer(100, -2)
 98
 >>> add_integer(100.3, -2)
 98
+>>> add_integer(float("inf"), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(1, float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(-float("inf"), 1)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(1, -float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer([1, 2], 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(1, [1, 2])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer({1: "Monty"}, 1)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(1, {1: "Monty"})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer({1: "Monty"}, {2: "Python"})
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(2, 2)
+4
+>>> add_integer(-2, -2)
+-4
+>>> add_integer(-2, 2)
+0
+>>> add_integer(2, -2)
+0
+>>> add_integer("Ni", "Ni!")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(100.1, -2.9)
+98
+>>> add_integer(-2.9, 1)
+-1
+>>> add_integer(1, -2.9)
+-1
+>>> add_integer({1, 2}, 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(5, {1, 2})
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(5, (1, 2))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer((3,7), (1, 2))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
