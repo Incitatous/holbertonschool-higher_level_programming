@@ -1,0 +1,29 @@
+>>> mul = __import__('1-mul').mul
+>>> mul(3, 4)
+12
+>>> mul(None, None)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+>>> mul(1, None)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+>>> mul(None, 1)
+Traceback (most recent call last):
+...
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+>>> mul(1.345678987653456787654, 6)
+8.07407392592074
+>>> mul(-1, 34787656)
+-34787656
+>>> mul(0, 0)
+0
+>>> mul(4, 5, 6, 7)
+Traceback (most recent call last):
+...
+TypeError: mul() takes 2 positional arguments but 4 were given
+>>> mul()
+Traceback (most recent call last):
+...
+TypeError: mul() missing 2 required positional arguments: 'a' and 'b'
