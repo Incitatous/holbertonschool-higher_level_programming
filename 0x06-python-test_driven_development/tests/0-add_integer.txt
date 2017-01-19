@@ -1,4 +1,4 @@
->>> add_integer = __import__('0-add_integer').add_integer
+dd_integer = __import__('0-add_integer').add_integer
 >>> add_integer("parrot sketch", 14)
 Traceback (most recent call last):
 ...
@@ -95,12 +95,3 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> add_integer(lambda x: x, 2.5)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
->>> add_integer(2.5, lambda x: x)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
-
