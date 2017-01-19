@@ -1,29 +1,23 @@
-text_indentation = __import__('5-text_indentation').text_indentation
-.?
-Waffles:
-?
-
->>> What sign is he?
-
+>>> text_indentation = __import__("5-text_indentation").text_indentation
 >>> text_indentation("  Tagada")
 Tagada
-
+<BLANKLINE>
 >>> text_indentation(" . ? : ")
 .
-
+<BLANKLINE>
 ?
-
+<BLANKLINE>
 :
-
+<BLANKLINE>
 >>> text_indentation("    MY SPOON IS TOO BIG!...    I am a banana.\n     blearg    ")
 MY SPOON IS TOO BIG!...
-
+<BLANKLINE>
    I am a banana.
      blearg
-
+<BLANKLINE>
 >>> text_indentation("Mwaha!" + u'\u2020')
 Mwaha!†
-
+<BLANKLINE>
 >>> text_indentation(777)
 Traceback (most recent call last):
 ...
@@ -38,7 +32,7 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation("Hello, holberton?.:")
 Hello, holberton?.:
-
+<BLANKLINE>
 >>> text_indentation((14, 14))
 Traceback (most recent call last):
 ...
