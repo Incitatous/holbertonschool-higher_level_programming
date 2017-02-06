@@ -3,4 +3,4 @@ def number_of_lines(filename=""):
     with open(filename) as fhandle:
         for line in fhandle:
             i += 1
-        return i
+    return i
