@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 def read_lines(filename="", nb_lines=0):
-    i = 0
+    i = 1
     with open(filename) as fhandle:
-        for line in fhandle:
-            nb_lines += 1
-            if i <= nb_lines or nb_lines > 0:
-                print(line, end="")
-            elif nb_lines <= 0:
-                print(line, end="")
+            if nb_lines <= 0:
+                print(fhandle.read(), end="")
+            else:
+                for line in fhandle:
+                    if i <= nb_lines:
+                        print(line, end="")
+                        i += 1
