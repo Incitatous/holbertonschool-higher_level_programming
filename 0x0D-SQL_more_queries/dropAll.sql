@@ -1,0 +1,2 @@
+-- Drops everything
+DROP *
