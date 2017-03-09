@@ -10,5 +10,6 @@ if __name__ == "__main__":
     myCursor.execute("SELECT * FROM states\
                     WHERE name = '{:s}' ORDER BY id".format(sys.argv[4],))
     for i in myCursor.fetchall():
-        print(i)
+        if i[1] == argv[4]:
+            print(i)
     db.close()
