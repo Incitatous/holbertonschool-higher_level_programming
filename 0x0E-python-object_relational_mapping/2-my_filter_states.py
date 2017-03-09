@@ -7,7 +7,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     myCursor = db.cursor()
-    myCursor.execute("SELECT * FROM hbtn_0e_0_usa.states\
+    myCursor.execute("SELECT * FROM states\
                     WHERE name = '{:s}' ORDER BY id".format(sys.argv[4],))
     for i in myCursor.fetchall():
         print(i)
