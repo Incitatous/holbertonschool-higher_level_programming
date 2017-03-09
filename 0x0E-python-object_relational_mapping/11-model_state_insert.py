@@ -15,6 +15,7 @@ if __name__ == "__main__":
     session = Session()
     addingLouisiana = State(name="Louisiana")
     session.add(addingLouisiana)
+    session.commit()
 
     for instance in session.query(State).order_by(
             State.id).filter(State.name == "Louisiana"):
