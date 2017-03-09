@@ -17,5 +17,6 @@ if __name__ == "__main__":
     session.add(addingLouisiana)
 
     for instance in session.query(State).order_by(
-            State.id):
-        print("{}: {}".format(instance.id, instance.name))
+            State.id).filter(State.name == "Louisiana").first():
+        print("{}".format(instance.id))
+        break
