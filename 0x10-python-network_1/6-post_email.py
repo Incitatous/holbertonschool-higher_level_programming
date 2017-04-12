@@ -3,6 +3,5 @@ import requests
 import sys
 myurl = sys.argv[1]
 email = sys.argv[2]
-data = {'email': email}
-r = requests.post(myurl, data)
+r = requests.post(myurl, data={'email': email})
 print(r.text)
