@@ -1,11 +1,13 @@
 #!/usr/bin/node
-let myArr = [];
-for (let i = 2; process.argv[i]; i++) {
-  myArr.push(process.argv[i]);
+if (!process.argv[2] || !process.argv[3]) { console.log(0); } else {
+  let myArr = [];
+  for (let i = 2; process.argv[i]; i++) {
+    myArr.push(process.argv[i]);
+  }
+  let sortedArr = myArr.sort();
+  sortedArr.pop();
+  console.log(sortedArr.pop());
 }
-let sortedArr = myArr.sort();
-sortedArr.pop();
-console.log(sortedArr.pop());
 /*
 if (!process.argv[2] || !process.argv[3]) { console.log(0); } else {
   let secMax = -Infinity;
