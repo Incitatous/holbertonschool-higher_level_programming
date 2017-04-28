@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function add (a, b) {
-  let res = a * b;
+  let res = parseInt(a) + parseInt(b);
   return (res);
 }
 
