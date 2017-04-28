@@ -1,8 +1,16 @@
 #!/usr/bin/node
+let myArr = [];
+for (let i = 2; process.argv[i]; i++) {
+  myArr.push(process.argv[i]);
+}
+let sortedArr = myArr.sort();
+sortedArr.pop();
+console.log(sortedArr.pop());
+/*
 if (!process.argv[2] || !process.argv[3]) { console.log(0); } else {
-  let secMax = process.argv[2];
-  let Max = process.argv[2];
-  for (let i = 0; process.argv[i]; i++) {
+  let secMax = -Infinity;
+  let Max = -Infinity;
+  for (let i = 2; process.argv[i]; i++) {
     if (process.argv[i] > Max) {
       Max = process.argv[i];
     }
@@ -12,3 +20,4 @@ if (!process.argv[2] || !process.argv[3]) { console.log(0); } else {
   }
   console.log(secMax);
 }
+*/
