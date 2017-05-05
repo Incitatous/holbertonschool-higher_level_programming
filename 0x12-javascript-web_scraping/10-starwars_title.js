@@ -1,5 +1,5 @@
 #!/usr/bin/node
-var request = require('request');
+const request = require('request');
 const url = 'http://swapi.co/api/films/' + parseInt(process.argv[2]);
 request(url, function (err, response, body) {
   if (err) {
